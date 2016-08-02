@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 	resources :users
 
 	#SESSION ROUTES
-	get "/login", to: "sessions#new", as: "new_session"
+	get "/sign_in", to: "sessions#new", as: "new_session"
   	post "/sessions", to: "sessions#create", as: "create_session"
+  	delete "/sessions", to: "sessions#destroy", as: "logout"
 end
