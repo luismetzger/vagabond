@@ -9,11 +9,7 @@ class SessionsController < ApplicationController
 	      login(@user)
 	      redirect_to "/users/#{@user.id}"
 	    else
-<<<<<<< HEAD
-	      redirect_to "sign_in"
-=======
 	      redirect_to "/login"
->>>>>>> 9beae865fbcb1100fecfdadb5592fb48e00ad965
 	    end
 	end
 
