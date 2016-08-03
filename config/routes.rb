@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 	#SESSION ROUTES
 	get "/login", to: "sessions#new", as: "new_session"
   	post "/sessions", to: "sessions#create", as: "create_session"
+  	delete "/sessions", to: "sessions#destroy", as: "logout"
+
+  	#POST ROUTES
+  	resources :posts
 end
