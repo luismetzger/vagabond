@@ -9,8 +9,13 @@ class SessionsController < ApplicationController
 	      login(@user)
 	      redirect_to "/users/#{@user.id}"
 	    else
-	      redirect_to "/sign_in"
+	      redirect_to "/login"
 	    end
+	end
+
+	def destroy
+  		session[:user_id] = nil
+   		redirect_to new_session_path, :notice => "Logged out"
 	end
 
 	private
