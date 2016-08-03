@@ -1,1 +1,11 @@
-<h1> Welcome <%= @user.first_name %> </h1>
+<!-- WILL NEED TO REPLACE THIS DIV WITH TEMP IMAGE -->
+<div style="height: 100px, width: 100px">
+	<img src = "<%= @user.profile_pic %>" >
+</div>
+
+<h1><%= @user.first_name %> </h1>
+<p>Current City: <%= @user.city %> </p>
+<p>Joined: <%= @date %> </p><br>
+<%= button_to 'Edit', edit_user_path(@user), :method => :get %><br>
+<%= button_to 'Logout', logout_path, method: :delete %>
+
