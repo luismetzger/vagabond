@@ -18,6 +18,15 @@ footer {
 			padding-top: 23px;
     		padding-left: 147px;
 			color: $white;
+
+			li {
+
+				a {
+					font-family: $avenir-book;
+					font-size: $font-size-large;
+					color: $white;
+				}
+			}
 		}
 
 		.footer-paragraph {
