@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "partials/variables";
+
+// footer
+footer {
+	height: 350px;
+	background-color: $blue-footer;
+	color: $white;
+	padding: 0 20px;
+	font-family: $avenir-light;
+
+	.footer-list{
+		list-style-type: none;
+	}
+
+}
+
+.bg-pattern {
+		background-image: url('footer-bg-pattern.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
