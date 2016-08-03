@@ -1,0 +1,16 @@
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+  </div>
+  <div>
+    <%= f.text_field :city, placeholder: "City" %>
+  </div>
+  <div>
+    <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
+  </div>
+  <%= f.submit "Update Info" %>
+<% end %>
+
+<br>
+
+<%= button_to 'Logout', logout_path, method: :delete %>
