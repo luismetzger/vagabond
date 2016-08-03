@@ -1,0 +1,306 @@
+
+@import "bootstrap";
+@import "partials/variables";
+
+
+// Navigation bar
+
+.navbar-inverse {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.custom-navbar {
+  margin-bottom: 0;
+  background: rgba(0,0,0,0.0);
+  border-color: rgba(0,0,0,0.0);
+  padding: 25px 80px;
+
+  ul {
+
+    @media screen and (max-width: $screen-sm) {
+      margin-top: 200px;
+
+    }
+
+
+    li {
+      padding: 0 20px;
+      color: $white;
+
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+
+      }
+
+      a {
+        font-family: $avenir-light;
+        font-size: $font-size-large;
+        color: $white !important;
+        outline: none;
+
+
+        &:hover {
+          color: #9d9d9d !important;
+        }
+
+
+      }
+      .signup-btn {
+        padding: 15px 45px;
+        color: $white;
+        transition: all 0.5s ease;
+        background-color: rgba(0,0,0,0.0);
+
+        &:hover {
+          background: $white;
+          color: $blue-footer !important;
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    border-color: rgba(0,0,0,0.0) !important;
+  }
+
+  .navbar-header {
+
+    a {
+      outline: none;
+      img {
+        width: 80px;
+      }
+    }
+
+    .navbar-toggle {
+      border-color: $white;
+      margin-right: -8%;
+      margin-top: 20px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #9d9d9d;
+      }
+    }
+  }
+}
+
+// Hero section
+.hero-bg {
+  height: 600px;
+  background-image: url('hero-img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+
+
+  .overlay {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.5);
+    z-index: -1;
+
+  }
+  h1 {
+    padding-top: 100px;
+  }
+  p {
+
+    @media screen and (max-width: $screen-sm) {
+        padding: 0 75px;
+
+    }
+  }
+  .title {
+    color: $white;
+    z-index: 2;
+    font-family: $avenir-light;
+  }
+}
+
+
+
+// Fullscreen Modal
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+.modal-content {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
+    border-radius: 0;
+    background-color: rgba(39,42,44, 0.9);
+
+    .modal-header {
+        border-bottom: transparent !important;
+
+        .close {
+          color: #fff;
+          font-size: 70px !important;
+          padding-top: 30px;
+          padding-bottom: 60px;
+        }
+    }
+
+    .modal-body {
+
+      .login-header {
+        padding: 15px;
+        border-bottom: 1px solid #505558;
+
+        .login-title {
+          font-family: $avenir-light;
+          font-size: 4rem;
+          color: $white;
+        }
+      }
+
+      .login-box {
+
+        form {
+
+          .user-username {
+              padding: 30px 0 0 0;
+
+              label {
+                display: inline-block;
+                max-width: 100%;
+                margin-bottom: 5px;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: #42494C;
+                font-family: $avenir-light;
+                padding: 10px 0;
+              }
+              input {
+                font-family: $avenir-light;
+                background-color: transparent;
+                border: 1px solid #505558;
+                border-radius: 4px;
+                height: 54px;
+                font-size: 22px;
+                font-size: 2.2rem;
+                color: $white;
+                padding: 10px 20px;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+              }
+          }
+          .user-password {
+              padding: 30px 0 0 0;
+              label {
+                display: inline-block;
+                max-width: 100%;
+                margin-bottom: 5px;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: #42494C;
+                font-family: $avenir-light;
+                padding: 10px 0;
+              }
+              input {
+                font-family: $avenir-light;
+                background-color: transparent;
+                border: 1px solid #505558;
+                border-radius: 4px;
+                height: 54px;
+                font-size: 2.2rem;
+                color: $white;
+                padding: 10px 20px;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+              }
+          }
+          .user-buttons {
+                margin-top: 30px !important;
+
+                .btn-login-submit {
+                  font-family: $avenir-light;
+                  background: #6ABD97;
+                  color: $white;
+                  font-size: 1.6rem;
+                  padding: 2.5% 19.5%;
+                  width: 48%;
+                  margin-bottom: 30px;
+                  float: left;
+                  display: inline;
+                  margin-right: 20px;
+                }
+                .btn-login-action{
+                  font-family: $avenir-light;
+                  font-size: 14px;
+                  background: transparent;
+                  border: 1px solid #505558;
+                  color: #42494C;
+                  font-size: 1.6rem;
+                  padding: 2.5% 19.5%;
+                  width: 48%;
+                  display: inline;
+                  -webkit-transition: all 0.3s ease-out;
+                  transition: all 0.3s ease-out;
+
+                }
+          }
+        }
+      }
+    }
+}
+
+
+
+// Footer - Layout
+
+
+// footer
+footer {
+	height: 350px;
+	background-color: $blue-footer;
+	color: $white;
+	font-family: $avenir-light;
+	font-size: $font-size-large;
+
+	.content-container {
+
+		padding-top: 100px;
+
+		.footer-list{
+			list-style-type: none;
+			padding-top: 23px;
+    		padding-left: 147px;
+			color: $white;
+
+			li {
+
+				a {
+					font-family: $avenir-book;
+					font-size: $font-size-large;
+					color: $white;
+				}
+			}
+		}
+
+		.footer-paragraph {
+
+		}
+
+	}
+
+
+}
+
+.bg-pattern {
+		background-image: url('footer-bg-pattern.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
