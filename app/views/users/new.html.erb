@@ -1,29 +1,47 @@
-<h3>Sign Up</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
 
-<%= form_for @user do |f| %>
-  <div class="icon">
-    <%= f.text_field :first_name, placeholder: "First Name" %>
-  </div>
-  <div class="icon">
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </div>
-  <div class="icon">
-    <%= f.text_field :city, placeholder: "City" %>
-  </div>
-  <div class="icon">
-    <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
-  </div>
-  <div class="icon">
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div class="icon">
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %>
+    <h3>Sign Up</h3>
 
- <h3>Already Registered?</h3>
+    <%= form_for @user do |f| %>
+      <div class="form-group">
+        <%= f.text_field :first_name, placeholder: "First Name" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :last_name, placeholder: "Last Name" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :city, placeholder: "City" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.text_field :email, placeholder: "Email" %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.password_field :password, placeholder: "Password", :class => 'form_password' %>
+      </div>
+      <br>
+      <div class="form-group">
+       <%= f.submit "Sign Up" %>
+      </div>
+    <% end %>
 
-<%= button_to 'Login', new_session_path, :method => :get %><br>
+     <h3>Already Registered?</h3>
 
-<br>
+    <%= button_to 'Login', new_session_path, :method => :get %>
+      
+    </div>
+    
+  </div>
+  
+</div>
+
+
