@@ -7,8 +7,7 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-	def create
-	
+	def creates
 	@user = User.create(user_params)
 	login(@user) 
     redirect_to "/users/#{@user.id}"

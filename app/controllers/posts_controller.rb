@@ -12,6 +12,10 @@ class PostsController < ApplicationController
     	redirect_to "/posts"
   	end
 
+  	def show
+  		@post = Post.find(post_params)
+  	end
+
   	private
 
 	def post_params
