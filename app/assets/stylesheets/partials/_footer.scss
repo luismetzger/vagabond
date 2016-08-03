@@ -9,17 +9,23 @@ footer {
 	font-family: $avenir-light;
 	font-size: $font-size-large;
 
-	.footer-list{
-		list-style-type: none;
-		margin-top: 25%;
-		margin-left: auto;
-		color: $white;
-	}
+	.content-container {
 
-	.footer-paragraph {
-		margin-top: 15%;
-		margin-left: auto;
+		padding-top: 100px;
+
+		.footer-list{
+			list-style-type: none;
+			padding-top: 23px;
+    		padding-left: 147px;
+			color: $white;
+		}
+
+		.footer-paragraph {
+			
+		}
+
 	}
+	
 
 }
 
