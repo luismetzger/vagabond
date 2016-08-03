@@ -1,29 +1,29 @@
 <h3>Sign Up</h3>
 
 <%= form_for @user do |f| %>
-  <div>
+  <div class="icon">
     <%= f.text_field :first_name, placeholder: "First Name" %>
   </div>
-  <div>
+  <div class="icon">
     <%= f.text_field :last_name, placeholder: "Last Name" %>
   </div>
-  <div>
+  <div class="icon">
     <%= f.text_field :city, placeholder: "City" %>
   </div>
-  <div>
+  <div class="icon">
     <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
   </div>
-  <div>
+  <div class="icon">
     <%= f.text_field :email, placeholder: "Email" %>
   </div>
-  <div>
+  <div class="icon">
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
   <%= f.submit "Sign Up" %>
 <% end %>
 
-<br>
-
-<h3>Already Registered?</h3>
+ <h3>Already Registered?</h3>
 
 <%= button_to 'Login', new_session_path, :method => :get %><br>
+
+<br>
