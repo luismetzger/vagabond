@@ -1,0 +1,13 @@
+<div style="height: 100px; width: 100px;">
+	<img style = "height: 100px;" src = "<%= @city.photo %>" >
+</div>
+
+<h1><%= @city.name %></h1>
+
+<% if @current_user %>
+	<h1><%= @city.post.title %></h1>
+<%end%>
+
+
+
+

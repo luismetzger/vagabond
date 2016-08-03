@@ -12,4 +12,7 @@ Rails.application.routes.draw do
 
   	#POST ROUTES
   	resources :posts
+
+  	#CITY ROUTES
+	resources :cities
 end
