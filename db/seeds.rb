@@ -7,15 +7,17 @@ user1 = User.create({
     last_name: "Kenney",
     city: "Denver",
     email: "alison@test.com",
-    password: "test"
+    password: "alison",
+    profile_pic: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVVAAAAJDcyM2IyMDUyLTg2OTYtNGVlZC04ZTg2LWI5MjY1NDE0MmRkYw.jpg"
     })
 
 user2 = User.create({
-    first_name: "Bob",
-    last_name: "Kenney",
+    first_name: "Nick",
+    last_name: "Ursetta",
     city: "Fort Collins",
-    email: "bob@test.com",
-    password: "test1"
+    email: "nick@test.com",
+    password: "nick",
+    profile_pic: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/16f/3e1/15e36cb.jpg"
     })
 
 post_1 = Post.create({
