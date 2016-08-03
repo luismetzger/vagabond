@@ -1,4 +1,4 @@
-<nav class="navbar transparent navbar-inverse navbar-fixed-top custom-navbar">
+<nav class="navbar custom-navbar">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-toggle="modal" data-target="#myModal">login</a></li>
         <li >
-          <a href="#" class="btn btn-default signup-btn" role="button" >sign up</a>
+          <%= link_to 'Sign Up', new_user_path, :method => :get, :class => 'btn btn-default signup-btn'%>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -31,7 +31,7 @@
   <div class="container">
     <div class="row">
       <h1 class="title text-center">live. love. life</h1>
-      <p class="title text-center">Fingerstache swag food truck, letterpress venmo typewriter fixie.</p>
+      <p class="title text-center">Stories of adventure from young professionals from all over.</p>
     </div>
   </div>
 </div>
@@ -55,7 +55,27 @@
                       <h3 class="login-title">User login</h3>
                     </div>
                     <div class="login-box">
-                      <form>
+
+                      <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+                        <div class="form-group user-username">
+                          <%= f.label :email, "Email address" %>
+                          <%= f.text_field :email, placeholder: "Enter email", :class => "form-control" %>
+                        </div>
+
+                        <div class="form-group user-password">
+                          <%= f.label :email, "Password" %>
+                          <%= f.password_field :password, placeholder: "Enter Password", :class => "form-control" %>
+                        </div>
+
+                        <div class="form-group user-buttons">
+                          <%= f.submit "Login", :class => "btn btn-success btn-login-submit" %>
+                          <button type="submit" class="btn btn-default btn-login-action">Cancel</button>
+                        </div>
+
+                      <% end %>
+
+
+                      <!-- <form>
                         <div class="form-group user-username">
                           <label for="exampleInputEmail1">Email address</label>
                           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
@@ -68,7 +88,7 @@
                           <button type="submit" class="btn btn-success btn-login-submit">Log In</button>
                           <button type="submit" class="btn btn-default btn-login-action">Cancel</button>
                         </div>
-                      </form>
+                      </form> -->
                     </div>
                   </div>
                 </div>

@@ -50,6 +50,11 @@ post_6 = Post.create({
     description: "This is a description 6",
     })
 
+city_1 = City.create({
+    name: "Denver",
+    photo: "http://housely.com/wp-content/uploads/2016/05/Denver.jpg"
+    })
+
 user1.posts << post_1
 user1.posts << post_2
 user1.posts << post_3
