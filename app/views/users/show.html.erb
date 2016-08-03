@@ -9,7 +9,9 @@
 <%= button_to 'Edit', edit_user_path(@user), :method => :get %><br>
 <%= button_to 'Logout', logout_path, method: :delete %>
 
-<% @posts.each do |post| %>
-<h1><%= post.title %></h1>
+
+<% @user.posts.each do |post| %>
+<%= link_to "#{post.title}", post_path(post), :method => :get %><br>
 <p><%= post.description %></p>
 <%end%>
+
