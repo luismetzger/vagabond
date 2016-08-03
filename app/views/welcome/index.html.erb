@@ -1,7 +1,41 @@
-<h1>WELCOME!</h1>
+<section class="section_1">
+  <div class="container">
+    <div class="row">
+      <h2 class="intro-title text-center">Wonder Stories of Travel</h2>
+      <p class="intro-p text-center">Discover unique travel stories from professionals</p>
+    </div>
+  </div>
 
-<h3>Sign Up</h3>
-<%= button_to 'Sign Up', new_user_path, :method => :get %><br>
+  <div class="container">
+    <div class="row">
+      <div class="travel_boxes">
+        <div class="col-md-4">
+          <div class="travel_box">
 
-<h3>Already Registered?</h3>
-<%= button_to 'Login', new_session_path, :method => :get %><br>
+            <div class="overlay">
+              <h2 class="text-center">Greece</h2>
+            </div>
+
+            <img class="img-responsive travel-img" src="https://static.pexels.com/photos/304/city-houses-village-buildings-large.jpg" alt="Travel" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="travel_box">
+            <div class="overlay">
+              <h2 class="text-center">Thailand</h2>
+            </div>
+            <img class="img-responsive travel-img" src="https://static.pexels.com/photos/33227/sunrise-phu-quoc-island-ocean-large.jpg" alt="Travel" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="travel_box">
+            <div class="overlay">
+              <h2 class="text-center">Switzerland</h2>
+            </div>
+            <img class="img-responsive travel-img" src="https://static.pexels.com/photos/31905/pexels-photo-large.jpg" alt="Travel" />
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>

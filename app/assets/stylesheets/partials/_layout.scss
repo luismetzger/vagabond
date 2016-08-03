@@ -5,16 +5,14 @@
 
 // Navigation bar
 
-.navbar-inverse {
-    background-color: transparent !important;
-    border-color: transparent !important;
-}
 
 .custom-navbar {
   margin-bottom: 0;
-  background: rgba(0,0,0,0.0);
-  border-color: rgba(0,0,0,0.0);
+  background: transparent !important;
+  border-color: transparent !important;
   padding: 25px 80px;
+  position: absolute;
+  width: 100%;
 
   ul {
 
@@ -264,24 +262,21 @@
 
 // footer
 footer {
-	height: 350px;
+
 	background-color: $blue-footer;
-	color: $white;
-	font-family: $avenir-light;
-	font-size: $font-size-large;
 
 	.content-container {
+		padding: 50px;
 
-		padding-top: 100px;
-
+    @media screen and (max-width: $screen-sm) {
+      padding: 30px 5px 20px;
+    }
 		.footer-list{
 			list-style-type: none;
-			padding-top: 23px;
-    		padding-left: 147px;
+    	padding-left: 147px;
 			color: $white;
 
 			li {
-
 				a {
 					font-family: $avenir-book;
 					font-size: $font-size-large;
@@ -291,12 +286,29 @@ footer {
 		}
 
 		.footer-paragraph {
-
+      font-family: $avenir-light;
+      color: $white;
+      font-size: 1.2em;
 		}
-
 	}
+  .mobile-nav {
 
+    ul {
+      list-style-type: none;
 
+      li {
+       display: inline;
+       padding: 0 10px;
+
+        a {
+          color: $white;
+          font-family: $avenir-light;
+          font-size: 1.6em;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .bg-pattern {
