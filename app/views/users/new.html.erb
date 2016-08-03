@@ -22,7 +22,7 @@
       </div>
       <br>
       <div class="form-group">
-        <%= f.text_field :email, placeholder: "Email" %>
+        <%= f.text_field :email, placeholder: "Email", :class => 'form_email' %>
       </div>
       <br>
       <div class="form-group">
@@ -35,8 +35,10 @@
     <% end %>
 
      <h3>Already Registered?</h3>
-
+     
+    <div class="form-group">
     <%= button_to 'Login', new_session_path, :method => :get %>
+    </div>
       
     </div>
     
