@@ -2,12 +2,20 @@
 User.destroy_all
 Post.destroy_all
 
-@user = User.create({
+user1 = User.create({
     first_name: "Alison",
     last_name: "Kenney",
     city: "Denver",
     email: "alison@test.com",
     password: "test"
+    })
+
+user2 = User.create({
+    first_name: "Bob",
+    last_name: "Kenney",
+    city: "Fort Collins",
+    email: "bob@test.com",
+    password: "test1"
     })
 
 post_1 = Post.create({
@@ -25,10 +33,28 @@ post_3 = Post.create({
     description: "This is a description 3",
     })
 
-@user.posts << post_1
-@user.posts << post_2
-@user.posts << post_3
+post_4 = Post.create({
+    title: "This is a post 4",
+    description: "This is a description 4",
+    })
 
+post_5 = Post.create({
+    title: "This is a post 5",
+    description: "This is a description 5",
+    })
+
+post_6 = Post.create({
+    title: "This is a post 6",
+    description: "This is a description 6",
+    })
+
+user1.posts << post_1
+user1.posts << post_2
+user1.posts << post_3
+
+user2.posts << post_4
+user2.posts << post_5
+user2.posts << post_6
 
 
 
