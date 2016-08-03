@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@date = @user.created_at.strftime("%d %b %Y")
+		@posts = Post.all
 	end
 
 	def edit
