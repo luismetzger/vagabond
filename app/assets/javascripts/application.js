@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function(){
+    $('.sidebar').css({'height':($(document).height())+'px'});
+    $(window).resize(function(){
+        $('.sidebar').css({'height':($(document).height())+'px'});
+    });
+});
