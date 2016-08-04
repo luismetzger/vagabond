@@ -518,7 +518,7 @@ footer {
             margin: 0;
             padding: 5px 0 30px;
 
-            button {
+            .show_action_btn {
               border: 0.08333rem solid #333447;
               background: transparent;
               padding: 15px 40px;
@@ -527,6 +527,7 @@ footer {
               font-family: "Avenir LT W01_35 Light1475496", sans-serif;
               color: #333447;
               transition: all 0.5s ease;
+              display: inline-block;
 
               &:hover {
                 background: #333447;
@@ -542,9 +543,21 @@ footer {
   }
 }
 
+.alert-warning {
+  h3 {
+    display: inline-block;
+    padding-left: 25px;
+  }
+  .close {
+    padding-right: 50px;
+    font-size: 3em;
+  }
+}
 
 .sign_up_section {
   padding-bottom: 50px;
+
+
 
   @media screen and (max-width: $screen-sm) {
     padding: 30px 20px;
@@ -589,6 +602,11 @@ footer {
       color: $blue-footer;
       display: inline-block;
 
+    }
+    .close {
+      padding-right: 15px;
+      font-size: 2em;
+      margin-top: -4px;
     }
   }
   .form-group {
