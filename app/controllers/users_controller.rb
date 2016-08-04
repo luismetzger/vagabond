@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	layout 'member'
+
 	def index
 		@users = User.all
 	end
