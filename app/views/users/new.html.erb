@@ -1,3 +1,4 @@
+
 <section class="sign_up_section">
   <div class="container">
     <div class="row">
@@ -17,6 +18,15 @@
             <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
           </div>
 
+          <% flash.each do |name, msg| %>
+          <div><%= msg %></div>
+          <% end %>
+
+          <h3>Sign Up</h3>
+
+          <%= form_for @user do |f| %>
+            <div>
+              <%= f.text_field :first_name, placeholder: "First Name" %>
             </div>
             <div>
               <%= f.text_field :last_name, placeholder: "Last Name" %>
@@ -33,9 +43,12 @@
             <div>
               <%= f.password_field :password, placeholder: "Password" %>
             </div>
+            <div>
+             <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+            </div>
             <%= f.submit "Sign Up" %>
           <% end %>
-        </div>
+
 
         <h3>Already Registered?</h3>
 

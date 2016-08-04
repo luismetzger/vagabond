@@ -1,5 +1,5 @@
 class AddCityToPostsReference < ActiveRecord::Migration[5.0]
   def change
-  	add_reference :cities, :post
+  	add_reference :posts, :city
   end
 end
