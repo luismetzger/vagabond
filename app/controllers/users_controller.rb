@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@date = @user.created_at.strftime("%d %b %Y")
 		@posts = Post.all
+		@
 
 
 	end
