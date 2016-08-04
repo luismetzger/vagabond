@@ -1,4 +1,12 @@
 
+<div class="alert alert-warning">
+  <% flash.each do |name, msg| %>
+    <h3><%= msg %></h3>
+  <% end %>
+  <a href="#" class="close pull-right" data-dismiss="alert">&times;</a>
+</div>
+
+
 <section class="sign_up_section">
   <div class="container">
     <div class="row">
@@ -13,41 +21,32 @@
         </div>
         <div class="center-block">
           <%= form_for @user, :html => {:class => "form-inline"}  do |f| %>
-          <div class="inner-addon has-success has-feedback">
-            <i class="glyphicon glyphicon-user form-control-feedback"></i>
+          <div class="form-group">
             <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
           </div>
-
-          <% flash.each do |name, msg| %>
-          <div><%= msg %></div>
-          <% end %>
-
-          <h3>Sign Up</h3>
-
-          <%= form_for @user do |f| %>
-            <div>
-              <%= f.text_field :first_name, placeholder: "First Name" %>
-            </div>
-            <div>
-              <%= f.text_field :last_name, placeholder: "Last Name" %>
-            </div>
-            <div>
-              <%= f.text_field :city, placeholder: "City" %>
-            </div>
-            <div>
-              <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
-            </div>
-            <div>
-              <%= f.text_field :email, placeholder: "Email" %>
-            </div>
-            <div>
-              <%= f.password_field :password, placeholder: "Password" %>
-            </div>
-            <div>
-             <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
-            </div>
-            <%= f.submit "Sign Up" %>
-          <% end %>
+          <div>
+            <%= f.text_field :first_name, placeholder: "First Name" %>
+          </div>
+          <div>
+            <%= f.text_field :last_name, placeholder: "Last Name" %>
+          </div>
+          <div>
+            <%= f.text_field :city, placeholder: "City" %>
+          </div>
+          <div>
+            <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
+          </div>
+          <div>
+            <%= f.text_field :email, placeholder: "Email" %>
+          </div>
+          <div>
+            <%= f.password_field :password, placeholder: "Password" %>
+          </div>
+          <div>
+           <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+          </div>
+          <%= f.submit "Sign Up" %>
+        <% end %>
 
 
         <h3>Already Registered?</h3>
