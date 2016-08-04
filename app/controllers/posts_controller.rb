@@ -37,7 +37,6 @@ class PostsController < ApplicationController
 
 		def destroy
         post = Post.find_by_id params[:id]
-				byebug
         post.destroy
         redirect_to user_path(current_user)
     end
