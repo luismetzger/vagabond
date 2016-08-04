@@ -435,8 +435,14 @@ footer {
 
 .post_container {
   background: #e1eff1;
-  
-  .post_content {
 
+  .post_content {
+    padding-top: 50px;
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 4em;
+      color: $blue-footer;
+    }
   }
 }
