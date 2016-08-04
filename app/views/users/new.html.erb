@@ -1,29 +1,46 @@
-<h3>Sign Up</h3>
+<section class="sign_up_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="text-center">Sign Up</h2>
 
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :first_name, placeholder: "First Name" %>
-  </div>
-  <div>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </div>
-  <div>
-    <%= f.text_field :city, placeholder: "City" %>
-  </div>
-  <div>
-    <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
-  </div>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %>
+        <h3 class="text-left">Account Info</h3>
+        <hr>
+        <div class="alert alert-warning">
+          <p class="text-center">Please enter a valid email address</p>
+          <a href="#" class="close pull-right" data-dismiss="alert">&times;</a>
+        </div>
+        <div class="center-block">
+          <%= form_for @user, :html => {:class => "form-inline"}  do |f| %>
+          <div class="inner-addon has-success has-feedback">
+            <i class="glyphicon glyphicon-user form-control-feedback"></i>
+            <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
+          </div>
 
-<br>
+            </div>
+            <div>
+              <%= f.text_field :last_name, placeholder: "Last Name" %>
+            </div>
+            <div>
+              <%= f.text_field :city, placeholder: "City" %>
+            </div>
+            <div>
+              <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
+            </div>
+            <div>
+              <%= f.text_field :email, placeholder: "Email" %>
+            </div>
+            <div>
+              <%= f.password_field :password, placeholder: "Password" %>
+            </div>
+            <%= f.submit "Sign Up" %>
+          <% end %>
+        </div>
 
-<h3>Already Registered?</h3>
+        <h3>Already Registered?</h3>
 
-<%= button_to 'Login', new_session_path, :method => :get %><br>
+        <%= button_to 'Login', new_session_path, :method => :get %>
+      </div>
+    </div>
+  </div>
+</section>
