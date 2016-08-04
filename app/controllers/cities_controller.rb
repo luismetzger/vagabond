@@ -5,6 +5,10 @@ class CitiesController < ApplicationController
 
 	def show
 		@city = City.find(params[:id])
-		@city.user_id = current_user.id
+		@posts = Post.where(:city_id => params[:id])
+		@post = Post.new
+		@post.city_id = @city.id
+		@cityposts = @city.posts.all
+
 	end
 end
