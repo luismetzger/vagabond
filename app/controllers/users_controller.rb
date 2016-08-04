@@ -7,10 +7,15 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	
 	def create
-	@user = User.create(user_params)
-	login(@user) 
-    redirect_to "/users/#{@user.id}"
+	    @user = User.create(user_params)
+	    login(@user) 
+	    if @user.save
+	       redirect_to "/users/#{@user.id}"
+	   else
+	     redirect_to "/users/new", flash: { error: @user.errors.full_messages.to_sentence }
+	    end
 	end
 
 	def show
@@ -33,7 +38,7 @@ class UsersController < ApplicationController
 	private
 
    		def user_params
-    	params.require(:user).permit(:first_name, :last_name, :email, :password, :city, :profile_pic)
+    	params.require(:user).permit(:first_name, :last_name, :email, :password, :city, :profile_pic, :password_confirmation)
    		end
 
 end
