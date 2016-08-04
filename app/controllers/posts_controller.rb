@@ -3,15 +3,15 @@ class PostsController < ApplicationController
 		@posts = Post.all
 	end
 
-	def new
-		@post = Post.new
-	end
+	# def new
+	# 	@post = Post.new
+	# end
 
 	def create
     	@post = Post.new(post_params)
     	@post.user_id = current_user.id
 		@post.save
-    	redirect_to "/posts/#{@post.id}"
+    	redirect_to user_path(current_user)
   	end
 
   	def show
@@ -22,6 +22,6 @@ class PostsController < ApplicationController
   	private
 
 	def post_params
-		params.require(:post).permit(:title, :description)		
+		params.require(:post).permit(:title, :description, :city_id)		
 	end
 end
