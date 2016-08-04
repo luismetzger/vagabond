@@ -1,17 +1,34 @@
-<!-- WILL NEED TO REPLACE THIS DIV WITH TEMP IMAGE -->
-<div style="height: 100px, width: 100px">
-	<img src = "<%= @user.profile_pic %>" >
+<div class="col-md-4 sidebar_container">
+	<aside class="sidebar">
+		<div class="profile_img_container">
+			<div class="overlay"></div>
+			<img src = "<%= @user.profile_pic %>" >
+		</div>
+
+		<div class="profile_info">
+			<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
+			<p>Current City: <%= @user.city %> </p>
+			<p>Joined: <%= @date %> </p><br>
+			<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
+		</div>
+	</aside>
 </div>
 
-<h1><%= @user.first_name %> </h1>
-<p>Current City: <%= @user.city %> </p>
-<p>Joined: <%= @date %> </p><br>
-<%= button_to 'Edit', edit_user_path(@user), :method => :get %><br>
-<%= button_to 'Logout', logout_path, method: :delete %>
-
-
-<% @user.posts.each do |post| %>
-<%= link_to "#{post.title}", post_path(post), :method => :get %><br>
-<p><%= post.description %></p>
-<%end%>
-
+<div class="container-fluid post_container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="post_content">
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2">
+						<h2>Posts</h2>
+						<hr>
+						<% @user.posts.each do |post| %>
+						<%= link_to "#{post.title}", post_path(post), :method => :get %><br>
+						<p><%= post.description %></p>
+						<%end%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

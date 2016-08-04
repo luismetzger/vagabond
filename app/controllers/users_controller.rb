@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	layout 'member'
+
 	def index
 		@users = User.all
 	end
@@ -9,7 +11,7 @@ class UsersController < ApplicationController
 
 	def create
 	@user = User.create(user_params)
-	login(@user) 
+	login(@user)
     redirect_to "/users/#{@user.id}"
 	end
 
