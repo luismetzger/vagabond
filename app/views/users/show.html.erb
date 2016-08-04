@@ -32,6 +32,7 @@
 			<div class="post_content">
 				<div class="container">
 					<div class="col-md-8 col-md-offset-2">
+
 						<button class="btn btn-primary add_post_btn pull-right">New Post</button>
 
 						<h2>Posts</h2>
@@ -45,10 +46,10 @@
 						<div class="container-fluid action_btn_container">
 							<div class="action_buttons">
 								<div class="col-md-6">
-									<%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg' %>
+									<%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
 								</div>
 								<div class="col-md-6 col-md-pull-4">
-									<button class="btn btn-danger btn-lg show_action_btn">Delete</button>
+									<%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, :class => 'btn btn-danger btn-lg show_action_btn'  %>
 								</div>
 							</div>
 						</div>
