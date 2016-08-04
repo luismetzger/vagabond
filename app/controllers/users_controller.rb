@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
-
+				p logged_in?
 	end
 
 	def create
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 		@date = @user.created_at.strftime("%d %b %Y")
 		@posts = Post.all
 
-		p current_user
+
 	end
 
 	def edit
