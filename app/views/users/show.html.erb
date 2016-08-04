@@ -5,12 +5,24 @@
 			<img src = "<%= @user.profile_pic %>" >
 		</div>
 
-		<div class="profile_info">
+		<div class="profile_info hidden-xs">
 			<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
 			<p>Current City: <%= @user.city %> </p>
 			<p>Joined: <%= @date %> </p><br>
 			<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
 		</div>
+
+		<div class="profile_info mobile_info visible-xs">
+			<div class="col-xs-8">
+				<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
+				<p>Current City: <%= @user.city %> </p>
+				<p>Joined: <%= @date %> </p><br>
+			</div>
+			<div class="col-xs-4">
+				<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
+			</div>
+		</div>
+
 	</aside>
 </div>
 
@@ -20,12 +32,26 @@
 			<div class="post_content">
 				<div class="container">
 					<div class="col-md-8 col-md-offset-2">
+						<button class="btn btn-primary add_post_btn pull-right">New Post</button>
+
 						<h2>Posts</h2>
 						<hr>
+						<div class="posts_container">
 						<% @user.posts.each do |post| %>
-						<%= link_to "#{post.title}", post_path(post), :method => :get %><br>
+
+						<p class="post_timestamp text-left">August 4, 2016</p>
+						<h3><%= link_to "#{post.title}", post_path(post), :method => :get %></h3>
 						<p><%= post.description %></p>
+						<div class="container-fluid action_btn_container">
+							<div class="action_buttons">
+								<div class="col-md-6">
+									<button class="btn btn-primary btn-lg">Edit</button>
+									<button class="btn btn-danger btn-lg">Delete</button>
+								</div>
+							</div>
+						</div>
 						<%end%>
+						</div>
 					</div>
 				</div>
 			</div>
