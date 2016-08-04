@@ -13,6 +13,7 @@ module SessionsHelper
   #    redirect_to "/sign_in"
   #  end
   !!session[:user_id]
+  
  end
 
  def logout
