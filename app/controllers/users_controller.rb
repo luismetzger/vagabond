@@ -25,7 +25,6 @@ class UsersController < ApplicationController
 		@date = @user.created_at.strftime("%d %b %Y")
 		@posts = Post.all
 
-
 	end
 
 	def edit
