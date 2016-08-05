@@ -1,27 +1,33 @@
-<div style="height: 100px; width: 100px;">
-	<img style = "height: 100px;" src = "<%= @city.photo %>" >
+
+<div class="container city-show">
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+		  <a href="#postModal" class="add_post_btn pull-right" role="button" data-toggle="modal">New Post</a>
+
+		  <h2 class="text-left">All Posts</h2>
+		  <hr>
+
+		  <% @cityposts.each do |post| %>
+		    <p class="post_timestamp text-left">August 4, 2016</p>
+  			<h3><%= post.title %></h3>
+  			<p><%= post.description %></p>
+
+  		    <div class="container-fluid action_btn_container">
+  			  <div class="action_buttons">
+  			    <div class="col-md-6">
+  			      <%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
+  			    </div>
+  			    <div class="col-md-6 col-md-pull-4">
+  			      <%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-lg show_action_btn'  %>
+  			    </div>
+  			  </div>
+  			</div>
+  		<%end%>
+	  </div>
+	</div>
 </div>
 
-<h1><%= @city.name %></h1>
 
-<% @cityposts.each do |post| %>
-	<p><%= post.title %></p>
-	<p><%= post.description %></p>
-
-  <div class="container-fluid action_btn_container">
-              <div class="action_buttons">
-                <div class="col-md-6">
-                  <%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
-                </div>
-                <div class="col-md-6 col-md-pull-4">
-                  <%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-lg show_action_btn'  %>
-                </div>
-              </div>
-            </div>
-
-<%end%>
-
-<a href="#postModal" role="button" data-toggle="modal">New Post</a>    
 
 <!-- Fullscreen Modal -->
 <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -50,28 +56,16 @@
                         </div>
 
 
-					    <%= f.hidden_field :city_id %>
 
-                          <button type="submit" class="btn btn-default ">Submit</button>
+
+					  <div class="form-group user-buttons">
+						<%= f.hidden_field :city_id %>
+                      	<button type="submit" class="btn btn-default btn-login-submit">Submit</button>
+					  </div>
+
                     </div>
                       <% end %>
 
-
-
-                      <!-- <form>
-                        <div class="form-group user-username">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                        <div class="form-group user-password">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group user-buttons">
-                          <button type="submit" class="btn btn-success btn-login-submit">Log In</button>
-                          <button type="submit" class="btn btn-default btn-login-action">Cancel</button>
-                        </div>
-                      </form> -->
                     </div>
                   </div>
                 </div>
@@ -81,6 +75,3 @@
         </div>
     </div>
 </div>
-
-
-
