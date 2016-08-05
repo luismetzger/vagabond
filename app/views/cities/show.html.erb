@@ -8,8 +8,9 @@
 
 		  <% @cityposts.each do |post| %>
 		    <p class="post_timestamp text-left">August 4, 2016</p>
-  			<h3><%= post.title %></h3>
+        <h3><%= link_to "#{post.title}", post_path(post), :method => :get %></h3>
   			<p><%= post.description %></p>
+        <p>- <%= post.user.first_name %> <%= post.user.last_name %></p> 
 
   		    <div class="container-fluid action_btn_container">
   			  <div class="action_buttons">

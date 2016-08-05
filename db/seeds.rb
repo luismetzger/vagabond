@@ -17,6 +17,21 @@ city_3 = City.create({
     photo: "http://www.trbimg.com/img-56ccbd2a/turbine/la-fi-mh-seattle-s-minimum-wage-kills-jobs-but-data-20160222"
     })
 
+city_4 = City.create({
+    name: "Austin",
+    photo: "https://i.ytimg.com/vi/5LCp_8C6hE0/maxresdefault.jpg"
+    })
+
+city_5 = City.create({
+    name: "New York",
+    photo: "http://usa.sae.edu/assets/Campuses/New-York/2015/New_York_City_view.jpg"
+    })
+
+city_6 = City.create({
+    name: "London",
+    photo: "http://s1.it.atcdn.net/wp-content/uploads/2015/08/2-London.jpg"
+    })
+
 user_1 = User.create({
     first_name: "Alison",
     last_name: "Kenney",
@@ -106,6 +121,72 @@ post_9 = Post.create({
     title: "Shabby Chic Lumbersexual",
     description: "Gentrify viral vegan, artisan bitters intelligentsia poutine health goth lomo banjo tacos. Poutine williamsburg lo-fi, brooklyn gentrify knausgaard fanny pack listicle sustainable biodiesel helvetica 90's 8-bit you probably haven't heard of them authentic. Cronut banjo godard, keffiyeh chartreuse health goth salvia four loko cornhole freegan aesthetic. ",
     })
+
+post_10 = Post.create({
+    city_id: city_4.id, 
+    user_id: user_1.id,
+    title: "Four Dollar Toast",
+    description: "Ethical skateboard hammock, etsy viral affogato church-key vegan schlitz raw denim meh franzen chillwave. Keffiyeh food truck wolf messenger bag thundercats. 3 wolf moon fap biodiesel gluten-free, tofu knausgaard sartorial jean shorts kinfolk.",
+    })
+
+post_11 = Post.create({
+    city_id: city_4.id, 
+    user_id: user_2.id,
+    title: "Ethical Skateboard Hammock",
+    description: "Blog listicle hoodie waistcoat sartorial. Aesthetic semiotics jean shorts, cronut VHS dreamcatcher stumptown green juice offal bicycle rights kickstarter forage. Migas craft beer brooklyn normcore, bushwick lomo messenger bag cardigan wayfarers deep v scenester waistcoat +1 etsy flannel.",
+    })
+
+post_12 = Post.create({
+    city_id: city_4.id, 
+    user_id: user_3.id,
+    title: "Pork Belly",
+    description: " Franzen gentrify shoreditch pork belly, truffaut roof party squid chia food truck meggings cliche. Cray letterpress tote bag, ennui jean shorts echo park messenger bag. Hella salvia YOLO, food truck etsy irony whatever craft beer tattooed shabby chic chillwave helvetica lumbersexual. Occupy try-hard deep v pop-up artisan, kickstarter mumblecore viral health goth meditation meggings polaroid pug kogi hammock.",
+    })
+
+post_13 = Post.create({
+    city_id: city_5.id, 
+    user_id: user_1.id,
+    title: "Tacos Drinking Vinegar",
+    description: "Tacos gastropub fingerstache, yr locavore roof party four dollar toast. Chia twee hammock, normcore meh disrupt beard polaroid man bun taxidermy roof party lo-fi offal synth. Tilde cronut brunch, chicharrones chambray knausgaard four loko etsy meh master cleanse hashtag squid gluten-free quinoa street art. "
+    })
+
+post_14 = Post.create({
+    city_id: city_5.id, 
+    user_id: user_2.id,
+    title: "Letterpress Beard",
+    description: "Asymmetrical messenger bag knausgaard, franzen venmo listicle hashtag put a bird on it hella letterpress beard tacos ugh master cleanse stumptown. Craft beer chambray DIY green juice keffiyeh. Butcher brooklyn next level, tilde pabst drinking vinegar direct trade irony."
+    })
+
+post_15 = Post.create({
+    city_id: city_5.id, 
+    user_id: user_3.id,
+    title: "Helvetica Fingerstache",
+    description: "Roof party gochujang bicycle rights man braid cronut meh small batch. Yr pitchfork asymmetrical, leggings swag flannel echo park photo booth taxidermy irony gastropub. Irony yr pabst beard yuccie photo booth. Yr kogi pabst salvia hoodie next level."
+    })
+
+post_16 = Post.create({
+    city_id: city_6.id, 
+    user_id: user_1.id,
+    title: "Hoodie Chia Art",
+    description: "Aesthetic bespoke cold-pressed keytar, beard locavore whatever crucifix shoreditch small batch letterpress sustainable tousled. Listicle marfa flexitarian meggings knausgaard mumblecore, selfies iPhone pabst PBR&B bicycle rights authentic gochujang ennui yr. Humblebrag helvetica roof party, XOXO shoreditch chillwave iPhone meh beard flexitarian cronut."
+    })
+
+post_17 = Post.create({
+    city_id: city_6.id, 
+    user_id: user_2.id,
+    title: "Yuccie Salvia Fap",
+    description: "Yuccie salvia fap disrupt, venmo cred mlkshk cronut pickled occupy microdosing stumptown. Deep v williamsburg brooklyn fanny pack four loko, gastropub health goth lomo +1 trust fund. Umami asymmetrical kinfolk artisan, you probably haven't heard of them sartorial mixtape retro hoodie selfies humblebrag bitters. "
+    })
+
+post_18 = Post.create({
+    city_id: city_6.id, 
+    user_id: user_3.id,
+    title: "Waistcoat Banjo",
+    description: "Marfa gentrify green juice keffiyeh. Church-key polaroid celiac, locavore twee tacos meggings tote bag leggings. Fap pabst quinoa, ugh twee pitchfork stumptown. Street art cronut wayfarers celiac, fap aesthetic VHS seitan farm-to-table marfa YOLO pork belly disrupt 3 wolf moon."
+    })
+
+
+
 
 
 
