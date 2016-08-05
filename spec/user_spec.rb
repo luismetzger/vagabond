@@ -22,7 +22,7 @@ require 'rails_helper'
 	end
 	describe Post do
 		subject(:post) {Post.new}
-		desribe "#post" do
+		describe "#post" do
 			it 'allows a user to enter the title of their post' do
 				post.title = "title"
 				post.save
