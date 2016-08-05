@@ -1,6 +1,7 @@
 
 User.destroy_all
 Post.destroy_all
+City.destroy_all
 
 city_1 = City.create({
     name: "Denver",
