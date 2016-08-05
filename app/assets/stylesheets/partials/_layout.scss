@@ -877,3 +877,123 @@ footer {
       text-transform: capitalize;
   }
 }
+.edit_post_container {
+    padding-bottom: 50px;
+
+
+
+    @media screen and (max-width: $screen-sm) {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 2.5em;
+      color: $blue-footer;
+      padding-top: 20px;
+    }
+    h3 {
+      font-family: $avenir-light;
+      font-size: 1.8em;
+      color: $blue-footer;
+      padding-top: 20px;
+
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+      }
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+
+          @media screen and (max-width: $screen-sm) {
+            margin: 0 auto;
+          }
+    }
+    .alert-warning {
+          width: 650px;
+
+          @media screen and (max-width: $screen-sm) {
+            width: 400px;
+            margin: 0 auto;
+          }
+
+      p {
+        font-family: $avenir-light;
+        font-size: 1.2em;
+        color: $blue-footer;
+        display: inline-block;
+
+      }
+      .close {
+        padding-right: 15px;
+        font-size: 2em;
+        margin-top: -4px;
+      }
+    }
+    .form-group {
+        margin: 0;
+        padding: 0;
+
+      input {
+        width: 650px;
+        padding: 25px 15px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: .25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        margin: 10px 0;
+        font-family: $avenir-light;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+      textarea {
+        width: 650px;
+        padding: 25px 15px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: .25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        margin: 10px 0;
+        font-family: $avenir-light;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+    }
+    .form-button {
+        padding-top: 10px;
+        margin-bottom: 20px;
+
+
+
+        .form-button {
+          border: 0.08333rem solid #333447;
+          background: transparent;
+          padding: 15px 40px;
+          border-radius: 0.55rem;
+          margin-right: 10px;
+          font-family: "Avenir LT W01_35 Light1475496", sans-serif;
+          color: #333447;
+          transition: all 0.5s ease;
+
+          @media screen and (max-width: $screen-sm) {
+                margin-left: 175px;
+          }
+
+          &:hover {
+            background: #333447;
+            color: #fff;
+
+          }
+        }
+      }
+}
