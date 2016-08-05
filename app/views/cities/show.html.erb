@@ -14,7 +14,7 @@
                   <%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
                 </div>
                 <div class="col-md-6 col-md-pull-4">
-                  <%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, :class => 'btn btn-danger btn-lg show_action_btn'  %>
+                  <%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-lg show_action_btn'  %>
                 </div>
               </div>
             </div>
