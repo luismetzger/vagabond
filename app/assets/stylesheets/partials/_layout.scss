@@ -573,6 +573,36 @@ footer {
         }
       }
     }
+    .profile_info2 {
+      padding: 20px;
+
+      h2 {
+        font-family: $avenir-light;
+        font-size: 1.8em;
+        color: #e1eff1;
+        padding-bottom: 20px;
+      }
+      p {
+        font-family: $avenir-light;
+        font-size: 1.2em;
+        color: #e1eff1;
+      }
+      .edit-btn {
+        border: 0.08333rem solid $white;
+        background: transparent;
+        font-size: 1.5em;
+        padding: 15px 40px;
+        border-radius: 0.55rem;
+        font-family: $avenir-light;
+        color: $white;
+        transition: all 0.5s ease;
+
+        &:hover {
+          background: $white;
+          color: #333447;
+        }
+      }
+    }
     .mobile_info {
       height: 200px;
 

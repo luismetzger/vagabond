@@ -12,7 +12,7 @@
 			<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
 		</div>
 
-		<div class="profile_info mobile_info visible-xs">
+		<div class="profile_info2 mobile_info visible-xs">
 			<div class="col-xs-8">
 				<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
 				<p>Current City: <%= @user.city %> </p>
@@ -62,6 +62,3 @@
 		</div>
 	</div>
 </div>
-
-  
-

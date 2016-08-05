@@ -18,13 +18,38 @@
 
 
 $(function(){
-    $('.sidebar').css({'height':($(document).height())+'px'});
-    $(window).resize(function(){
-        $('.sidebar').css({'height':($(document).height())+'px'});
-    });
+
+
+
+            // $(window).resize(function(){
+            //     if ($(window).width() >= 768){
+            //         $('.profile_info').css({'height':($(document).height())+'px'});
+            //     }
+            //
+            // });
+
+            var windowH = $(window).height();
+            var wrapperH = $('.profile_info').height();
+            if(windowH > wrapperH) {
+                $('.profile_info').css({'height':($(window).height())+'px'});
+            }
+            $(window).resize(function(){
+                if ($(window).width() >= 768){
+                    var windowH = $(window).height();
+                    var wrapperH = $('.profile_info').height();
+                    var differenceH = windowH - wrapperH;
+                    var newH = wrapperH + differenceH;
+                    var truecontentH = $('.sidebar').height();
+                    if(windowH > truecontentH) {
+                        $('.profile_info').css('height', (newH)+'px');
+                    }
+                }
+            })
+
+
 
     $('.post2_container').css({'height':($(document).height())+'px'});
     $(window).resize(function(){
-        $('.sidebar').css({'height':($(document).height())+'px'});
+        $('.post2_container').css({'height':($(document).height())+'px'});
     });
 });
