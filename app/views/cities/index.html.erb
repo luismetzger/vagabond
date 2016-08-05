@@ -5,8 +5,8 @@
 		        <div class="col-md-4 city-block">
 					<h3><%= link_to "#{city.name}", city_path(city), :method => :get, :class => "other-link" %></h3>
 					<a href = "cities/<%=city.id%>">
-					<div>
-					<img style="height: 300px; width: 300px;" src="<%= city.photo %>">
+					<div class="city-img">
+					<img class = "img-block" src="<%= city.photo %>">
 					</div>
 					</a>
 				</div>
