@@ -115,6 +115,7 @@
         font-family: $avenir-light;
         color: #333447;
         transition: all 0.5s ease;
+        float: right;
 
         &:hover {
           background: #333447;
@@ -170,6 +171,44 @@
     color: $white;
     z-index: 2;
     font-family: $avenir-light;
+  }
+  .cta_buttons {
+     padding: 10px 0;
+
+     ul {
+       padding-top: 25px;
+       padding-right: 50px;
+
+       li {
+         padding: 0 20px;
+
+         a {
+             font-size: 1.5em;
+             font-family: $avenir-light;
+             color: #333447;
+
+             &:hover {
+               background-color: transparent;
+             }
+
+         }
+         .logout-btn {
+           border: 0.08333rem solid #333447;
+           padding: 15px 40px;
+           border-radius: 0.55rem;
+           font-family: $avenir-light;
+           color: #333447;
+           transition: all 0.5s ease;
+
+           &:hover {
+             background: #333447;
+             color: $white;
+           }
+
+         }
+
+       }
+     }
   }
 }
 
