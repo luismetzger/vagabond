@@ -1,4 +1,6 @@
 class CitiesController < ApplicationController
+	layout 'cities'
+
 	def index
 		@cities = City.all
 	end
