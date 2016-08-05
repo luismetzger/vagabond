@@ -820,3 +820,60 @@ footer {
       }
     }
 }
+.post2_container {
+    padding: 50px 0;
+    background: $white;
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 4em;
+      color: $blue-footer;
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+    }
+
+  .post_timestamp {
+    font-family: $avenir-light;
+    font-size: 1em;
+    color: $blue-footer;
+  }
+  h3 {
+    font-family: $avenir-heavy;
+    color: $blue-footer;
+    background-color: rgba(255,230,131, 0.5);
+    margin: 0 0 10px;
+    padding: 5px 20px 5px 5px;
+    width: 50%;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    a {
+      font-family: $avenir-heavy;
+      font-size: 1.2em;
+      color: $blue-footer;
+
+    }
+  }
+  p {
+    font-family: $avenir-light;
+    font-size: 1.8em;
+    line-height: 2em;
+    color: $blue-footer;
+    text-align: justify;
+  }
+  .author_title {
+      font-family: $avenir-light;
+      font-style: italic;
+      font-size: 1.2em;
+      color: $blue-footer;
+      text-align: justify;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      text-transform: capitalize;
+  }
+}
