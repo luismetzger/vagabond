@@ -7,7 +7,7 @@
 		  <hr>
 
 		  <% @cityposts.each do |post| %>
-		    <p class="post_timestamp text-left">August 4, 2016</p>
+		    <p class="post_timestamp text-left"><%= post.created_at.strftime("%d %b %Y") %></p>
         <h3><%= link_to "#{post.title}", post_path(post), :method => :get %></h3>
   			<p><%= post.description %></p>
         <p>- <%= post.user.first_name %> <%= post.user.last_name %></p> 
