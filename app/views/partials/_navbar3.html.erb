@@ -26,12 +26,12 @@
 </nav>
 
 <!-- Hero Image -->
-<div class="jumbotron hero-bg">
+<div class="jumbotron city-bg" style="background-image: url(<%= @city.photo %>)">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <h1 class="title text-center">live. love. life</h1>
-      <p class="title text-center">Stories of adventure from young professionals from all over.</p>
+      <h1 class="title text-center"><%= @city.name %></h1>
+
     </div>
   </div>
 </div>
