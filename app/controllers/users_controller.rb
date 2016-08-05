@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-	
+
 	def create
 	    @user = User.create(user_params)
-	    login(@user) 
+	    login(@user)
 	    if @user.save
 	       redirect_to "/users/#{@user.id}"
 	   else
@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 		@date = @user.created_at.strftime("%d %b %Y")
 		@posts = Post.all
 
+		
 	end
 
 	def edit

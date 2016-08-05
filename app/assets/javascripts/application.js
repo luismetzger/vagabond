@@ -22,4 +22,9 @@ $(function(){
     $(window).resize(function(){
         $('.sidebar').css({'height':($(document).height())+'px'});
     });
+
+    $('.post2_container').css({'height':($(document).height())+'px'});
+    $(window).resize(function(){
+        $('.sidebar').css({'height':($(document).height())+'px'});
+    });
 });
