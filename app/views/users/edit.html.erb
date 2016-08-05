@@ -1,16 +1,37 @@
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.text_field :first_name, placeholder: "First Name" %>
-  </div>
-  <div>
-    <%= f.text_field :city, placeholder: "City" %>
-  </div>
-  <div>
-    <%= f.text_field :profile_pic, placeholder: "Profile Pic" %>
-  </div>
-  <%= f.submit "Update Info" %>
-<% end %>
+<div class="container edit_user_container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Edit your profile</h2>
+          <h3 class="text-left">Profile info</h3>
+          <hr>
+          <div class="alert alert-warning">
+            <p class="text-center">Update any profile field and click on 'Update Info'</p>
+            <a href="#" class="close pull-right close2" data-dismiss="alert">&times;</a>
+          </div>
+          <div class="center-block">
+              <%= form_for @user do |f| %>
+                <div class="form-group">
+                    <img class="img-rounded profile_img col-md-offset-3 hidden-xs" src="<%= @user.profile_pic %>" />
+                    <img class="img-rounded profile_img center-block visible-xs mobile_profile_img" src="<%= @user.profile_pic %>" />
+                    <%= f.label :profile_pic, 'Profile URL' %>
+                    <%= f.text_field :profile_pic, placeholder: "Profile Pic", :class => "form-control profile_url" %>
 
-<br>
+                </div>
 
-<%= button_to 'Logout', logout_path, method: :delete %>
+                <div class="form-group">
+                  <%= f.label :first_name, 'First Name', :class => "text-left" %>
+                  <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :city, 'City' %>
+                  <%= f.text_field :city, placeholder: "City", :class => "form-control" %>
+                </div>
+
+                <div class="form-button">
+                    <%= f.submit "Update Info", :class => "form-button"  %>
+                </div>
+              <% end %>
+          </div>
+      </div>
+    </div>
+</div>

@@ -13,25 +13,31 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
+      <% if logged_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <%= link_to 'Logout', logout_path, method: :delete%>
+        </li>
+        </ul>
+      <% else %>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
         <li >
           <%= link_to 'Sign Up', new_user_path, :method => :get, :class => 'btn btn-default signup-btn'%>
         </li>
       </ul>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <!-- Hero Image -->
-<div class="jumbotron hero-bg">
+<div class="jumbotron city-bg" style="background-image: url(<%= @city.photo %>)">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <h1 class="title text-center">live. love. life</h1>
-      <p class="title text-center">Stories of adventure from young professionals from all over.</p>
+      <h1 class="title text-center"><%= @city.name %></h1>
+
     </div>
   </div>
 </div>

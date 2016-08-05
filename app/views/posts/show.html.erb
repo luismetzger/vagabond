@@ -1,3 +1,9 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.user.first_name %></p> 
-<p><%= @post.description %></p>
+<div class="container post2_container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <h2 class="tex-left"><%= @post.title %></h2>
+          <p class="author_title">author: <%= @post.user.first_name %> <%= @user.last_name %>  |  date: <%= @post.created_at.strftime("%d %b %Y") %></p>
+          <p><%= @post.description %></p>
+      </div>
+    </div>
+</div> 

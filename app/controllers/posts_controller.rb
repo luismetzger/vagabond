@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+	layout 'member'
+
 	def index
 		@posts = Post.all
 	end
@@ -23,19 +25,25 @@ class PostsController < ApplicationController
   		@post = Post.find(params[:id])
   	end
 
-  	def update	
-  		@post = Post.find_by_id params[:id]
-		if @post.update_attributes(post_params)
-			flash[:success]  = 'Success, post updated'
-			redirect_to post_path(@post)		
-		else 
-			flash[:error] = 'Not wokring'
-		end
+  	def update
+	  		@post = Post.find_by_id params[:id]
+			if @post.update_attributes(post_params)
+				flash[:success]  = 'Success, post updated'
+				redirect_to post_path(@post)
+			else
+				flash[:error] = 'Not wokring'
+			end
   	end
+
+		def destroy
+        post = Post.find_by_id params[:id]
+        post.destroy
+        redirect_to user_path(current_user)
+    end
 
   	private
 
 	def post_params
-		params.require(:post).permit(:title, :description, :city_id, :user_id)		
+		params.require(:post).permit(:title, :description, :city_id, :user_id)
 	end
 end

@@ -173,7 +173,134 @@
   }
 }
 
+// City Page
+.city-bg {
+    height: 400px;
+    // background-image: url('http://d6jhp3hr7lf1v.cloudfront.net/wp-content/uploads/sites/106/2014/08/ss-21-denver-at-night-LUX.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: -1;
 
+    .overlay {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(44, 62, 80, 0.7);
+      z-index: -1;
+
+    }
+    h1 {
+      padding-top: 100px;
+    }
+    p {
+
+      @media screen and (max-width: $screen-sm) {
+          padding: 0 75px;
+
+      }
+    }
+    .title {
+      color: $white;
+      z-index: 2;
+      font-family: $avenir-heavy;
+    }
+}
+
+.city-show {
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 4em;
+      color: $blue-footer;
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+    }
+    h3 {
+      font-family: $avenir-heavy;
+      color: $blue-footer;
+      background-color: rgba(255,230,131, 0.5);
+      margin: 0 0 10px;
+      padding: 5px 20px 5px 5px;
+      width: 50%;
+
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+      }
+
+      a {
+        font-family: $avenir-heavy;
+        font-size: 1.2em;
+        color: $blue-footer;
+
+      }
+    }
+    p {
+      font-family: $avenir-book;
+      font-size: 1.2em;
+      color: $blue-footer;
+    }
+    .post_timestamp {
+      font-family: $avenir-light;
+      font-size: 1em;
+      color: $blue-footer;
+    }
+    .action_btn_container {
+      margin: 0;
+      padding: 0;
+
+      .action_buttons {
+
+        .col-md-6 {
+          margin: 0;
+          padding: 5px 0 30px;
+
+          .show_action_btn {
+            border: 0.08333rem solid #333447;
+            background: transparent;
+            padding: 15px 40px;
+            border-radius: 0.55rem;
+            margin-right: 10px;
+            font-family: "Avenir LT W01_35 Light1475496", sans-serif;
+            color: #333447;
+            transition: all 0.5s ease;
+            display: inline-block;
+
+            &:hover {
+              background: #333447;
+              color: #fff;
+
+            }
+          }
+        }
+      }
+
+    }
+    .add_post_btn {
+      border: 0.08333rem solid #333447;
+      font-size: 1.5em;
+      background: transparent;
+      padding: 15px 40px;
+      border-radius: 0.55rem;
+      font-family: "Avenir LT W01_35 Light1475496", sans-serif;
+      color: #333447;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background: #333447;
+        color: #fff;
+
+      }
+    }
+}
 
 // Fullscreen Modal
 .modal-dialog {
@@ -263,6 +390,18 @@
                 border: 1px solid #505558;
                 border-radius: 4px;
                 height: 54px;
+                font-size: 2.2rem;
+                color: $white;
+                padding: 10px 20px;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+              }
+              textarea {
+                font-family: $avenir-light;
+                background-color: transparent;
+                border: 1px solid #505558;
+                border-radius: 4px;
+                height: 150px;
                 font-size: 2.2rem;
                 color: $white;
                 padding: 10px 20px;
@@ -680,4 +819,309 @@ footer {
 
       }
     }
+}
+.post2_container {
+    padding: 50px 0;
+    background: $white;
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 4em;
+      color: $blue-footer;
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+    }
+
+  .post_timestamp {
+    font-family: $avenir-light;
+    font-size: 1em;
+    color: $blue-footer;
+  }
+  h3 {
+    font-family: $avenir-heavy;
+    color: $blue-footer;
+    background-color: rgba(255,230,131, 0.5);
+    margin: 0 0 10px;
+    padding: 5px 20px 5px 5px;
+    width: 50%;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    a {
+      font-family: $avenir-heavy;
+      font-size: 1.2em;
+      color: $blue-footer;
+
+    }
+  }
+  p {
+    font-family: $avenir-light;
+    font-size: 1.8em;
+    line-height: 2em;
+    color: $blue-footer;
+    text-align: justify;
+  }
+  .author_title {
+      font-family: $avenir-light;
+      font-style: italic;
+      font-size: 1.2em;
+      color: $blue-footer;
+      text-align: justify;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      text-transform: capitalize;
+  }
+}
+.edit_post_container {
+    padding-bottom: 50px;
+
+
+
+    @media screen and (max-width: $screen-sm) {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 2.5em;
+      color: $blue-footer;
+      padding-top: 20px;
+    }
+    h3 {
+      font-family: $avenir-light;
+      font-size: 1.8em;
+      color: $blue-footer;
+      padding-top: 20px;
+
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+      }
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+
+          @media screen and (max-width: $screen-sm) {
+            margin: 0 auto;
+          }
+    }
+    .alert-warning {
+          width: 650px;
+
+          @media screen and (max-width: $screen-sm) {
+            width: 400px;
+            margin: 0 auto;
+          }
+
+      p {
+        font-family: $avenir-light;
+        font-size: 1.2em;
+        color: $blue-footer;
+        display: inline-block;
+
+      }
+      .close {
+        padding-right: 15px;
+        font-size: 2em;
+        margin-top: -4px;
+      }
+    }
+    .form-group {
+        margin: 0;
+        padding: 0;
+
+      input {
+        width: 650px;
+        padding: 25px 15px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: .25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        margin: 10px 0;
+        font-family: $avenir-light;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+      textarea {
+        width: 650px;
+        padding: 25px 15px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: .25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        margin: 10px 0;
+        font-family: $avenir-light;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+    }
+    .form-button {
+        padding-top: 10px;
+        margin-bottom: 20px;
+
+
+
+        .form-button {
+          border: 0.08333rem solid #333447;
+          background: transparent;
+          padding: 15px 40px;
+          border-radius: 0.55rem;
+          margin-right: 10px;
+          font-family: "Avenir LT W01_35 Light1475496", sans-serif;
+          color: #333447;
+          transition: all 0.5s ease;
+
+          @media screen and (max-width: $screen-sm) {
+                margin-left: 175px;
+          }
+
+          &:hover {
+            background: #333447;
+            color: #fff;
+
+          }
+        }
+      }
+}
+.edit_user_container {
+    padding-bottom: 50px;
+
+
+
+    @media screen and (max-width: $screen-sm) {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-family: $avenir-light;
+      font-size: 2.5em;
+      color: $blue-footer;
+      padding-top: 20px;
+    }
+    h3 {
+      font-family: $avenir-light;
+      font-size: 1.8em;
+      color: $blue-footer;
+      padding-top: 20px;
+
+      @media screen and (max-width: $screen-sm) {
+        text-align: center;
+      }
+    }
+    hr {
+          border-top: 1px solid $blue-footer;
+          margin-right: 100px;
+          opacity: 0.3;
+
+          @media screen and (max-width: $screen-sm) {
+            margin: 0 auto;
+          }
+    }
+    .alert-warning {
+          width: 650px;
+
+          @media screen and (max-width: $screen-sm) {
+            width: 400px;
+            margin: 0 auto;
+          }
+
+      p {
+        font-family: $avenir-light;
+        font-size: 1.2em;
+        color: $blue-footer;
+        display: inline-block;
+
+        @media screen and (max-width: $screen-sm) {
+             font-size: 1em;
+        }
+
+      }
+      .close {
+        padding-right: 15px;
+        font-size: 2em;
+        margin-top: -4px;
+      }
+    }
+    .form-group {
+        margin: 0;
+        padding: 0;
+
+      label {
+          display: block;
+          margin: 15px 0;
+          font-family: $avenir-book;
+          font-size: 1em;
+          color: $blue-footer;
+      }
+
+      input {
+        width: 650px;
+        padding: 25px 15px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: .25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+        margin: 10px 0;
+        font-family: $avenir-light;
+        font-size: 1.5em;
+
+        @media screen and (max-width: $screen-sm) {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+    }
+    .profile_img {
+        border-radius: 150px;
+    }
+    .mobile_profile_img {
+        width: 200px;
+        margin: 10px auto;
+    }
+    .profile_url {
+
+        margin: 30px auto ;
+
+    }
+    .form-button {
+        padding-top: 10px;
+        margin-bottom: 20px;
+
+
+
+        .form-button {
+          border: 0.08333rem solid #333447;
+          background: transparent;
+          padding: 15px 40px;
+          border-radius: 0.55rem;
+          margin-right: 10px;
+          font-family: "Avenir LT W01_35 Light1475496", sans-serif;
+          color: #333447;
+          transition: all 0.5s ease;
+
+          @media screen and (max-width: $screen-sm) {
+                margin-left: 175px;
+          }
+
+          &:hover {
+            background: #333447;
+            color: #fff;
+
+          }
+        }
+      }
 }
