@@ -9,9 +9,11 @@ module SessionsHelper
  end
 
  def logged_in?
-   if current_user == nil
-     redirect_to "/sign_in"
-   end
+  #  if current_user == nil
+  #    redirect_to "/sign_in"
+  #  end
+  !!session[:user_id]
+  
  end
 
  def logout

@@ -1,17 +1,64 @@
-<!-- WILL NEED TO REPLACE THIS DIV WITH TEMP IMAGE -->
-<div style="height: 100px, width: 100px">
-	<img src = "<%= @user.profile_pic %>" >
+<div class="col-md-4 sidebar_container">
+	<aside class="sidebar">
+		<div class="profile_img_container">
+			<div class="overlay"></div>
+			<img src = "<%= @user.profile_pic %>" >
+		</div>
+
+		<div class="profile_info hidden-xs">
+			<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
+			<p>Current City: <%= @user.city %> </p>
+			<p>Joined: <%= @date %> </p><br>
+			<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
+		</div>
+
+		<div class="profile_info2 mobile_info visible-xs">
+			<div class="col-xs-8">
+				<h2><%= @user.first_name %> <%= @user.last_name.chars.first %>. </h2>
+				<p>Current City: <%= @user.city %> </p>
+				<p>Joined: <%= @date %> </p><br>
+			</div>
+			<div class="col-xs-4">
+				<%= button_to 'Edit', edit_user_path(@user), :method => :get, :class => 'edit-btn' %>
+			</div>
+		</div>
+
+	</aside>
 </div>
 
-<h1><%= @user.first_name %> </h1>
-<p>Current City: <%= @user.city %> </p>
-<p>Joined: <%= @date %> </p><br>
-<%= button_to 'Edit', edit_user_path(@user), :method => :get %><br>
-<%= button_to 'Logout', logout_path, method: :delete %>
+<div class="container-fluid post_container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="post_content">
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2">
+
+						<button class="btn btn-primary add_post_btn pull-right"><a class = "other-link" href = "/cities">View All Cities</a></button>
 
 
-<% @user.posts.each do |post| %>
-<%= link_to "#{post.title}", post_path(post), :method => :get %><br>
-<p><%= post.description %></p>
-<%end%>
+						<h2>Posts</h2>
+						<hr>
+						<div class="posts_container">
+						<% @user.posts.each do |post| %>
 
+						<p class="post_timestamp text-left">August 4, 2016</p>
+						<h3><%= link_to "#{post.title}", post_path(post), :method => :get %></h3>
+						<p><%= post.description %></p>
+						<div class="container-fluid action_btn_container">
+							<div class="action_buttons">
+								<div class="col-md-6">
+									<%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
+								</div>
+								<div class="col-md-6 col-md-pull-4">
+									<%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-lg show_action_btn'  %>
+								</div>
+							</div>
+						</div>
+						<%end%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

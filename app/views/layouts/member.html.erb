@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VagabondApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Custom Fonts -->
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/05c5e829-8372-4cdc-9d91-5e3594c80245.css"/>
+  </head>
+
+  <body>
+
+    <%= render :partial => 'partials/navbar2' %>
+
+    <%= yield %>
+
+  
+  </body>
+</html>

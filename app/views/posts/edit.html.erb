@@ -1,0 +1,26 @@
+<div class="container edit_post_container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Edit your post</h2>
+          <h3 class="text-left">Post info</h3>
+          <hr>
+          <div class="alert alert-warning">
+            <p class="text-center">Update any of the following fields</p>
+            <a href="#" class="close pull-right close2" data-dismiss="alert">&times;</a>
+          </div>
+          <div class="center-block">
+              <%= form_for @post do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :title, placeholder: "Title", :class => "form-control"  %>
+                </div>
+                <div class="form-group">
+                  <%= f.text_area :description, placeholder: "Description", cols: "50", rows: "20", :class => "form-control"  %>
+                </div>
+                <div class="form-button">
+                    <%= f.submit "Update Info", :class => "form-button"  %>
+                </div>
+              <% end %>
+          </div>
+      </div>
+    </div>
+</div>

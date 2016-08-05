@@ -1,40 +1,42 @@
-<nav class="navbar custom-navbar">
+<nav class="navbar member-navbar">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><%= image_tag("logo.png", :alt => "Logo", :class => "img-responsive logo") %></a>
-    </div>
+      <a class="navbar-brand" href="/"><%= image_tag("logo2.png", :alt => "Logo", :class => "img-responsive logo2") %></a>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
-        <li >
-          <%= link_to 'Sign Up', new_user_path, :method => :get, :class => 'btn btn-default signup-btn'%>
-        </li>
+        <!-- <li><a href="#" data-toggle="modal" data-target="#myModal">login</a></li> -->
+        <% if logged_in? %>
+
+          <li>
+            <%= link_to 'Logout', logout_path, method: :delete, :class => 'btn btn-default logout-btn'%>
+          </li>
+
+        <% else %>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal">login</a>
+          </li>
+          <li >
+            <%= link_to 'Sign Up', new_user_path, :method => :get, :class => 'btn btn-default signup-btn'%>
+          </li>
+
+        <% end %>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<!-- Hero Image -->
-<div class="jumbotron hero-bg">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <h1 class="title text-center">live. love. life</h1>
-      <p class="title text-center">Stories of adventure from young professionals from all over.</p>
-    </div>
-  </div>
-</div>
+
 
 
 
@@ -73,6 +75,8 @@
                         </div>
 
                       <% end %>
+
+
 
                     </div>
                   </div>

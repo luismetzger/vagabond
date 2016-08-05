@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-4">
@@ -47,3 +48,62 @@
 </div>
 
 
+=======
+<% flash.each do |name, msg| %>
+  <div class="alert alert-warning">
+      <h3><%= msg %></h3>
+    <a href="#" class="close pull-right" data-dismiss="alert">&times;</a>
+  </div>
+<% end %>
+
+
+<section class="sign_up_section">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Sign Up Form</h2>
+
+          <h3 class="text-left">Account Info</h3>
+          <hr>
+          <div class="alert alert-warning">
+            <p class="text-center">Please enter a valid email address</p>
+            <a href="#" class="close pull-right close2" data-dismiss="alert">&times;</a>
+          </div>
+          <div class="center-block">
+            <%= form_for @user, :html => {:class => "form-inline"}  do |f| %>
+            <div class="form-group">
+              <%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :last_name, placeholder: "Last Name", :class => "form-control"  %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :city, placeholder: "City", :class => "form-control"  %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :profile_pic, placeholder: "Profile Pic", :class => "form-control"  %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :email, placeholder: "Email", :class => "form-control"  %>
+            </div>
+            <div class="form-group">
+              <%= f.password_field :password, placeholder: "Password", :class => "form-control"  %>
+            </div>
+            <div class="form-group">
+             <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", :class => "form-control"  %>
+            </div>
+            <div class="form-button">
+              <%= f.submit "Sign Up", :class => "form-button"  %>
+            </div>
+          <% end %>
+
+
+          <h3>Already Registered?</h3>
+
+          <%= button_to 'Login', new_session_path, :method => :get, :class => "already_button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+>>>>>>> 1a9b02c108cb43345c2c0755696f2be3674d38bb

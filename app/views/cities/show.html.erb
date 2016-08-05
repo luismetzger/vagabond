@@ -1,0 +1,77 @@
+<div class="container city-show">
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+		  <a href="#postModal" class="add_post_btn pull-right" role="button" data-toggle="modal">New Post</a>
+
+		  <h2 class="text-left">All Posts</h2>
+		  <hr>
+
+		  <% @cityposts.each do |post| %>
+		    <p class="post_timestamp text-left">August 4, 2016</p>
+        <h3><%= link_to "#{post.title}", post_path(post), :method => :get %></h3>
+  			<p><%= post.description %></p>
+        <p>- <%= post.user.first_name %> <%= post.user.last_name %></p> 
+
+  		    <div class="container-fluid action_btn_container">
+  			  <div class="action_buttons">
+  			    <div class="col-md-6">
+  			      <%= button_to 'Edit', edit_post_path(post), :method => :get, :class => 'btn btn-primary btn-lg show_action_btn' %>
+  			    </div>
+  			    <div class="col-md-6 col-md-pull-4">
+  			      <%= button_to "Delete", {controller: :posts, action: 'destroy', id: post.id}, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-lg show_action_btn'  %>
+  			    </div>
+  			  </div>
+  			</div>
+  		<%end%>
+	  </div>
+	</div>
+</div>
+
+
+
+<!-- Fullscreen Modal -->
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+              <div class="row">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     <h4 class="modal-title" id="myModalLabel">New Post</h4>
+
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="modal-body">
+                    <div class="login-header">
+                      <h3 class="login-title">New Post</h3>
+                    </div>
+                    <div class="login-box">
+                      <%= form_for(@post) do |f| %>
+                        <div class="form-group user-username">
+                          <%= f.text_field :title, placeholder: "Post Title", :class => 'form-control' %>
+                        </div>
+
+                        <div class="form-group user-password">
+                          <%= f.text_area :description, placeholder: "Description", :class => 'form-control' %>
+                        </div>
+
+
+
+
+					  <div class="form-group user-buttons">
+						<%= f.hidden_field :city_id %>
+                      	<button type="submit" class="btn btn-default btn-login-submit">Submit</button>
+					  </div>
+
+                    </div>
+                      <% end %>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
